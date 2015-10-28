@@ -21,12 +21,15 @@ function counter(state = 0, action) {
   }
 }
 
+// Redux store
 let store = createStore(counter);
 
+// log after each state change
 store.subscribe(() =>
   console.log(store.getState())
 );
 
+// action dispatching demo, without UI
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DECREMENT' });
@@ -35,6 +38,9 @@ store.dispatch({ type: 'RESET' });
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DOUBLE' });
+
+
+// React Components
 
 class Counter extends Component {
   style() {
@@ -61,17 +67,21 @@ class App extends Component {
   }
 }
 
-let AppConnected = connect(select)(App);
-
+// the selector selects data from the state. Here use the identify function 
+// to get the "full" state
 function select(state) {
   return {
     value: state
   };
 }
+
+// connect the selector to the App component and return a new connected Component
+let AppConnected = connect(select)(App);
+
+// main react render function
 render(
   <Provider store={store}>
     <AppConnected />
   </Provider>,
   document.getElementById('root')
 );
-
