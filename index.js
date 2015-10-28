@@ -11,6 +11,8 @@ function counter(state = 0, action) {
     return state + action.value;
   case 'RESET':
     return 0;
+  case 'DOUBLE':
+    return state*2;
   default:
     return state;
   }
@@ -27,3 +29,6 @@ store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DECREMENT' });
 store.dispatch({ type: 'INCREMENT_BY', value: 10 });
 store.dispatch({ type: 'RESET' });
+store.dispatch({ type: 'INCREMENT' });
+store.dispatch({ type: 'INCREMENT' });
+store.dispatch({ type: 'DOUBLE' });
