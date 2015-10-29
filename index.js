@@ -51,6 +51,7 @@ class Counter extends Component {
 
 class App extends Component {
   render() {
+    // the probs are auto injected by the connect function
     const { dispatch, value }  = this.props;
     return(
       <div>
