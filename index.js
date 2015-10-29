@@ -64,16 +64,15 @@ class App extends Component {
   }
 }
 
-// the selector selects data from the state. Here use the identify function 
-// to get the "full" state
-function select(state) {
+// maps the state to the component props.
+let mapStateToProps = (state) => {
   return {
     value: state
   };
 }
 
 // connect the selector to the App component and return a new connected Component
-let AppConnected = connect(select)(App);
+let AppConnected = connect(mapStateToProps)(App);
 
 // main react render function
 render(
