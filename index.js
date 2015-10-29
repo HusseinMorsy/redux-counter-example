@@ -80,5 +80,5 @@ render(
   <Provider store={store}>
     <AppConnected />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('app')
 );
