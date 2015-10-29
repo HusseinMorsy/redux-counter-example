@@ -1,12 +1,18 @@
 {
   "name": "simple",
   "version": "1.0.0",
-  "description": "",
+  "description": "redux counter example",
   "main": "index.js",
   "scripts": {
-    "compile": "webpack"
+    "start": "open index.html && webpack -w",
+    "test": "tests are missing...",
+    "postinstall": "webpack"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HusseinMorsy/redux-counter-example.git"
+  },
+  "author": "Hussein Morsy",
   "license": "MIT",
   "dependencies": {
     "react": "^0.14.0",
