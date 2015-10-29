@@ -41,11 +41,9 @@ store.dispatch({ type: 'RESET' });
 // React Components
 
 class Counter extends Component {
-  style() {
-    return {fontFace: 'bold', color: '#00CC00', fontSize: '24px' };
-  }
   render() {
-    return <div style={this.style()}>{this.props.value}</div>;
+    const style = {fontFace: 'bold', color: '#00CC00', fontSize: '24px' };
+    return <div style={style}>{this.props.value}</div>;
   }
 }
 
