@@ -34,10 +34,8 @@ store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DECREMENT' });
 store.dispatch({ type: 'INCREMENT_BY', value: 10 });
-store.dispatch({ type: 'RESET' });
-store.dispatch({ type: 'INCREMENT' });
-store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DOUBLE' });
+store.dispatch({ type: 'RESET' });
 
 
 // React Components
@@ -56,7 +54,7 @@ class App extends Component {
     const { dispatch, value }  = this.props;
     return(
       <div>
-        <h1>Unser Counter Beispiel</h1>
+        <h1>Redux Counter Example</h1>
         <Counter value={value} />
         <button onClick={() => dispatch({type: 'INCREMENT'}) }>Increment</button>
         <button onClick={() => dispatch({type: 'DECREMENT'}) }>Decriment</button>
